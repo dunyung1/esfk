@@ -1,7 +1,70 @@
-.main{
-    margin-top: 20px;
-    img{
-        height:100vh;
-        width: 100%;
-    }
+@import 'placeholder';
+
+.main {
+  margin-top: 20px;
+
+  .cover, .main_gamer {
+    @extend %main_images;
+    object-fit: cover;
+  }
+
+  .centered {
+    position: absolute;
+    top: 146%;
+    left: 10%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    color: white;
+  }
+
+  .play {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    width: 80px;
+    height: 80px;
+  }
 }
+
+.news {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100vh;
+
+  .sysunit {
+    img {
+      @extend %dimensions;
+      object-fit: cover;
+      object-position: 40% 0;
+    }
+    .box{
+      @extend %box;
+    }
+  }
+
+  .comp {
+    img {
+      @extend %dimensions;
+      object-fit: cover;
+      object-position: 50% 0;
+    }
+    .box{
+      @extend %box;
+    }
+  }
+
+  .xbox {
+    img {
+      @extend %dimensions;
+      object-fit: contain;
+      object-position: 100% 10;
+    }
+    .box{
+      @extend %box;
+    }
+  }
+}
+
+

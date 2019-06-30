@@ -1,0 +1,28 @@
+%box {
+  width: 360px;
+  height: 158px;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(214, 214, 214);
+  padding: 1px 10px 0 10px;
+  margin: 20px 20px 0 0;
+
+  h1 {
+    font-weight: 500;
+  }
+
+  p {
+    font-weight: 400;
+  }
+}
+
+%dimensions {
+  width: 380px;
+  height: 500px;
+  margin-right: 45px;
+}
+
+%main_images{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
