@@ -5,12 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
+import { TournamentComponent } from './tournament/tournament.component';
+import { LeaguesComponent } from './leagues/leagues.component';
+import { LiveviewingComponent } from './liveviewing/liveviewing.component';
+import { EventsComponent } from './events/events.component';
+import { ClubsComponent } from './clubs/clubs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    TournamentComponent,
+    LeaguesComponent,
+    LiveviewingComponent,
+    EventsComponent,
+    ClubsComponent
   ],
   imports: [
     BrowserModule,
