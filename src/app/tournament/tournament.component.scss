@@ -1,8 +1,254 @@
-.main{
-    margin-top: 25px;
-    img{
-        height: 100vh;
-        width: 100%;
-        object-fit: cover;
+@import 'placeholder2';
+
+.main {
+  margin-top: 25px;
+
+  img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .buttons {
+    @extend %btn_display;
+    bottom: 0;
+    left: 40%;
+
+    .sch {
+      @extend %schedule;
     }
+
+    .join {
+      @extend %join;
+    }
+  }
+}
+
+.othergames {
+  display: grid;
+  grid-template-columns: 630px 630px;
+  grid-template-areas: 'ufc madden'
+    'nba balls'
+    'cod hitman'
+    'godofwar gta';
+  grid-gap: 0 20px;
+
+  .ufc {
+    img {
+      grid-area: ufc;
+      width: 635px;
+      height: 553px;
+      object-fit: cover;
+      object-position: 40% 0;
+    }
+
+    .buttons2 {
+      @extend %btn_display;
+      top: 182%;
+      margin-left: 96px;
+
+      .sch2 {
+        @extend %schedule;
+      }
+
+      .join2 {
+        @extend %join;
+      }
+    }
+  }
+
+  .madden {
+    img {
+      grid-area: madden;
+      width: 635px;
+      height: 552px;
+      object-fit: cover;
+      object-position: 40% 0;
+    }
+
+    .buttons3 {
+      @extend %btn_display;
+      top: 182%;
+      margin-left: 108px;
+
+      .sch3 {
+        @extend %schedule;
+      }
+
+      .join3 {
+        @extend %join;
+      }
+    }
+  }
+
+  .nba {
+    img {
+      grid-area: nba;
+      width: 635px;
+      height: 553px;
+      object-fit: cover;
+      object-position: 50% 0;
+    }
+
+    .buttons4 {
+      @extend %btn_display;
+      top: 265%;
+      margin-left: 96px;
+
+      .sch4 {
+        @extend %schedule;
+      }
+
+      .join4 {
+        @extend %join;
+      }
+    }
+  }
+
+  .collection {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    grid-area: balls;
+    width: 635px;
+    height: 553px;
+
+    .nhl {
+      img {
+        width: 100%;
+        height: 264px;
+        object-fit: cover;
+        object-position: 50% 0;
+      }
+
+      .buttons5 {
+        @extend %btn_display;
+        top: 224%;
+        margin-left: 108px;
+
+        .sch5 {
+          @extend %schedule;
+        }
+
+        .join5 {
+          @extend %join;
+        }
+      }
+    }
+
+    .pes {
+      img {
+        width: 100%;
+        height: 264px;
+        object-fit: cover;
+        object-position: 50% 0;
+        margin-top: 17px;
+      }
+
+      .buttons6 {
+        @extend %btn_display;
+        top: 267%;
+        margin-left: 108px;
+
+        .sch6 {
+          @extend %schedule;
+        }
+
+        .join6 {
+          @extend %join;
+        }
+      }
+    }
+  }
+
+  .cod {
+    img {
+      grid-area: cod;
+      width: 635px;
+      height: 264px;
+      object-fit: cover;
+      object-position: 50% 0;
+    }
+
+    .buttons7 {
+      @extend %btn_display;
+      top: 305%;
+      margin-left: 120px;
+
+      .sch7 {
+        @extend %schedule;
+      }
+
+      .join7 {
+        @extend %join;
+      }
+    }
+  }
+
+  .hitman {
+    img {
+      grid-area: hitman;
+      width: 635px;
+      height: 264px;
+      object-fit: cover;
+      object-position: 50% 0;
+    }
+
+    .buttons8 {
+      @extend %btn_display;
+      top: 305%;
+      margin-left: 120px;
+      .sch8 {
+        @extend %schedule;
+      }
+      .join8 {
+        @extend %join;
+      }
+    }
+  }
+
+  .godofwar {
+    img {
+      grid-area: godofwar;
+      width: 635px;
+      height: 264px;
+      object-fit: cover;
+      object-position: 50% 0;
+    }
+
+    .buttons9 {
+      @extend %btn_display;
+      top: 345%;
+      margin-left: 120px;
+      .sch9 {
+        @extend %schedule;
+      }
+      .join9 {
+        @extend %join;
+      }
+    }
+  }
+
+  .gta {
+    img {
+      grid-area: gta;
+      width: 635px;
+      height: 264px;
+      object-fit: cover;
+      object-position: 50% 0;
+    }
+
+    .buttons10 {
+      @extend %btn_display;
+      top: 345%;
+      margin-left: 120px;
+      .sch10 {
+        @extend %schedule;
+      }
+      .join10 {
+        @extend %join;
+      }
+    }
+  }
+
 }

@@ -1,0 +1,23 @@
+%schedule {
+  background-color: rgba(0, 0, 0, 0.863);
+  padding: 15px 32px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: white;
+}
+
+%join {
+  background-color: red;
+  padding: 15px 32px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: white;
+}
+
+%btn_display{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+}
