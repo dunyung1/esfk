@@ -44,7 +44,7 @@
 
     .buttons2 {
       @extend %btn_display;
-      top: 182%;
+      margin-top: 480px;
       margin-left: 96px;
 
       .sch2 {
@@ -68,7 +68,7 @@
 
     .buttons3 {
       @extend %btn_display;
-      top: 182%;
+      margin-top: 480px;
       margin-left: 108px;
 
       .sch3 {
@@ -92,7 +92,7 @@
 
     .buttons4 {
       @extend %btn_display;
-      top: 265%;
+      margin-top: 480px;
       margin-left: 96px;
 
       .sch4 {
@@ -108,7 +108,6 @@
   .collection {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     grid-area: balls;
     width: 635px;
     height: 553px;
@@ -123,7 +122,7 @@
 
       .buttons5 {
         @extend %btn_display;
-        top: 224%;
+        margin-top: 192px;
         margin-left: 108px;
 
         .sch5 {
@@ -147,7 +146,7 @@
 
       .buttons6 {
         @extend %btn_display;
-        top: 267%;
+        margin-top: 192px;
         margin-left: 108px;
 
         .sch6 {
@@ -172,7 +171,7 @@
 
     .buttons7 {
       @extend %btn_display;
-      top: 305%;
+      margin-top: 192px;;
       margin-left: 120px;
 
       .sch7 {
@@ -196,7 +195,7 @@
 
     .buttons8 {
       @extend %btn_display;
-      top: 305%;
+      margin-top: 192px;
       margin-left: 120px;
       .sch8 {
         @extend %schedule;
@@ -218,7 +217,7 @@
 
     .buttons9 {
       @extend %btn_display;
-      top: 345%;
+      margin-top: 192px;
       margin-left: 120px;
       .sch9 {
         @extend %schedule;
@@ -240,7 +239,7 @@
 
     .buttons10 {
       @extend %btn_display;
-      top: 345%;
+      margin-top: 192px;
       margin-left: 120px;
       .sch10 {
         @extend %schedule;
