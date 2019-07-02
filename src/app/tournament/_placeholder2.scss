@@ -17,8 +17,19 @@
   color: white;
 }
 
-%btn_display{
+%buttons {
     display: flex;
-    flex-direction: row;
+    flex-direction: row nowrap;
+    justify-content: center;
+    width: 100%;
     position: absolute;
+    bottom: 24px;   
+  
+    .sch {
+      @extend %schedule;
+    }
+
+    .join {
+      @extend %join;
+    }
 }
