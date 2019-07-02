@@ -1,0 +1,51 @@
+%title {
+  width: 100%;
+  height: 176px;
+  background-color: rgba(0, 0, 0, 0.38);
+  color: rgba(255, 255, 255, 0.87);
+  position: relative;
+  line-height: 176px;
+ 
+  h1 {
+    position: absolute;
+    margin: 0 0 0 24px;
+    font-weight: 500;
+    font-size: 48px;
+  }
+}
+
+%text{
+    background-color: rgba(0, 0, 0, 0.38);
+    color: rgba(255, 255, 255, 0.87);
+    margin-top: 24px;
+    padding: 24px;
+   
+    p {
+      font-size: 14px;
+      margin: 0;
+    }
+}
+
+%buttons{
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.87);
+    padding: 15px 32px;
+    border: none;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.54);
+   
+}
+
+%options {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: row;
+
+    .join {
+      margin-right: 50px;
+      @extend %buttons;
+    }
+    .watch {
+      @extend %buttons;
+    }
+  }
