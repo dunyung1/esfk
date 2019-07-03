@@ -1,29 +1,213 @@
-.games {
-  background-color: rgba(0, 0, 0, 0.54);
-  width: 288px;
-  height: 624px;
-  position: absolute;
+@import 'placeholder4';
+$light-grey: rgba(0, 0, 0, 0.54);
+$dark-grey: rgba(0, 0, 0, 0.87);
+$red: #FF0000;
 
-  img {
-    width: 72px;
-    height: 72px;
-    object-fit: cover;
-    object-position: 60% 0;
+.topsection {
+  display: flex;
+  flex-direction: row;
+  margin-right: 0;
+
+  .games {
+    background-color: $light-grey;
+    width: 288px;
+    height: 624px;
+    padding-top: 24px;
+
+    img {
+      width: 72px;
+      height: 72px;
+      object-fit: cover;
+      object-position: 60% 0;
+    }
+
+    .first,
+    .second,
+    .third,
+    .forth,
+    .fifth,
+    .sixth {
+      display: flex;
+      flex-direction: row;
+      margin: 0 0 24px 24px;
+
+      button {
+        margin-left: 24px;
+        height: 24px;
+        width: 144px;
+        background-color: rgba(0, 0, 0, 0.87);
+        color: white;
+        align-self: center;
+        border: none;
+      }
+    }
   }
 
-  .first, .second, .third, .forth, .fifth, .sixth {
-    display: flex;
-    flex-direction: row;
-    margin: 24px 0 24px 24px;
-    
-     button {
-      margin-left: 24px;
-      height: 24px;;
-      width: 144px;
-      background-color: rgba(0, 0, 0, 0.87);
-      color: white;
-      align-self: center;
-      border: none;
+  .gameplay {
+    width: 100%;
+    height: 100%;
+
+    .video_content {
+      background-color: $light-grey;
+      position: relative;
+      padding-left: 48px;
+
+      img {
+        width: 100%;
+        height: 408px;
+        object-fit: cover;
+        object-position: 60% 80%;
+      }
+
+      .label {
+        @extend %label;
+        position: absolute;
+      }
+
+      .fifa {
+        top: 5%;
+        margin-left: 24px;
+      }
+
+      .info {
+        display: flex;
+        flex-direction: row;
+
+        .dot {
+          @extend %icon_size;
+          background-color: $red;
+          border-radius: 50%;
+          position: absolute;
+          right: 6%;
+          top: 7%;
+        }
+
+        .live {
+          top: 5%;
+          right: 0;
+        }
+      }
+
+      .username {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 10%;
+        margin-left: 24px;
+        background-color: $light-grey;
+
+        img {
+          width: 20px;
+          height: 20px;
+        }
+
+        p {
+          font-size: 10px;
+          color: white;
+          margin: auto 0 auto 5px;
+        }
+      }
+
+      .leaguetext {
+        background-color: $light-grey;
+        font-size: 14px;
+        bottom: 3.8%;
+        margin: 0 0 0 24px;
+        padding: 5px;
+        position: absolute;
+        color: rgba(255, 255, 255, 0.54);
+      }
+
+      .extras {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 10%;
+        right: 0;
+
+        img {
+          @extend %icon_size;
+        }
+
+        .eye {
+          margin: auto 6px;
+        }
+
+        .res,
+        .time {
+          padding: 6px;
+          background-color: $dark-grey;
+          font-size: 10px;
+          color: white;
+        }
+
+        .settings {
+          margin: auto 40px;
+        }
+
+        .expand {
+          margin: auto 32px auto 0;
+        }
+      }
+
+    }
+
+    .gta_viewed {
+      margin: 48px 0 0 24px;
+
+      .gtapics {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 24px;
+        margin-right: 24px;
+
+        img {
+          @extend %game_size;
+          object-fit: cover;
+          object-position: 60% 0;
+          position: relative;
+        }
+
+        .controls {
+          position: absolute;
+          margin-top: 16px;
+          display: flex;
+          flex-direction: row;
+          font-size: 10px;
+
+          .label {
+            padding: 8px 16px;
+            background-color: $light-grey;
+            color: white;
+            align-self: center;
+            border: none;
+          }
+
+          .gta {
+            top: 5%;
+            margin-left: 24px;
+          }
+
+          .info {
+            display: flex;
+            flex-direction: row;
+            margin-left: 120px;
+
+            .dot {
+              @extend %icon_size;
+              background-color: $red;
+              border-radius: 50%;
+              margin: auto;
+            }
+
+            .live {
+             margin-left: 8px;
+            }
+          }
+        }
+
+      }
     }
   }
 }
