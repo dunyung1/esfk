@@ -1,0 +1,83 @@
+@import 'placeholder5';
+$light-grey: rgba(0, 0, 0, 0.12);
+$dark-grey: rgba(0, 0, 0, 0.38);
+$kinda_grey: rgba(0, 0, 0, 0.54);
+
+.main {
+  margin: 24px auto 0 auto;
+  width: 744px;
+
+  img {
+    height: 456px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 60% 0;
+  }
+
+  .boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .redbox {
+      background-color: rgba(196, 0, 0, 1);
+      @extend %box_dimensions;
+    }
+
+    .box,
+    .box2,
+    .box3,
+    .box4,
+    .box5 {
+      background-color: $light-grey;
+      @extend %box_dimensions;
+    }
+  }
+
+  .info {
+    background-color: $light-grey;
+    text-align: center;
+    margin-top: 4px;
+    font-size: 24px;
+    padding: 8px 0 8px 0;
+  }
+}
+
+.events {
+  display: grid;
+  grid-template-columns: 424px 424px;
+  grid-template-rows: 384px 384px;
+  grid-gap: 24px;
+  width: 68%;
+  margin: 24px auto 0 auto;
+
+  .pagu2018,
+  .paguseason,
+  .fifa,
+  .eagc {
+    background-color: $light-grey;
+    padding: 16px 0 16px 0;
+    font-size: 14px;
+  }
+
+  .first {
+    @extend %first;
+  }
+
+  .time {
+    @extend %time;
+  }
+
+  .venue {
+    @extend %venue;
+  }
+
+  .tickets {
+    @extend %tickets;
+  }
+
+  .read {
+    @extend %read;
+  }
+
+}
