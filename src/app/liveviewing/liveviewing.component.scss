@@ -2,6 +2,7 @@
 $light-grey: rgba(0, 0, 0, 0.54);
 $dark-grey: rgba(0, 0, 0, 0.87);
 $red: #FF0000;
+$game_space: 48px 0 0 24px;
 
 .topsection {
   display: flex;
@@ -44,9 +45,6 @@ $red: #FF0000;
   }
 
   .gameplay {
-    width: 100%;
-    height: 100%;
-
     .video_content {
       background-color: $light-grey;
       position: relative;
@@ -61,6 +59,7 @@ $red: #FF0000;
 
       .label {
         @extend %label;
+        padding: 8px;
         position: absolute;
       }
 
@@ -89,33 +88,15 @@ $red: #FF0000;
       }
 
       .username {
-        display: flex;
-        flex-direction: row;
-        position: absolute;
-        bottom: 10%;
+        @extend %username;
         margin-left: 24px;
-        background-color: $light-grey;
-
-        img {
-          width: 20px;
-          height: 20px;
-        }
-
-        p {
-          font-size: 10px;
-          color: white;
-          margin: auto 0 auto 5px;
-        }
+        bottom: 10.8%;
       }
 
       .leaguetext {
-        background-color: $light-grey;
-        font-size: 14px;
-        bottom: 3.8%;
+        @extend %leaguetext;
         margin: 0 0 0 24px;
-        padding: 5px;
-        position: absolute;
-        color: rgba(255, 255, 255, 0.54);
+        bottom: 3.8%;
       }
 
       .extras {
@@ -153,58 +134,67 @@ $red: #FF0000;
     }
 
     .gta_viewed {
-      margin: 48px 0 0 24px;
+      margin: $game_space;
 
       .gtapics {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-gap: 24px;
-        margin-right: 24px;
+        @extend %game_grid;
 
-        img {
-          @extend %game_size;
-          object-fit: cover;
-          object-position: 60% 0;
+        .gtalive {
           position: relative;
+
+          img {
+            @extend %game_images;
+          }
+
+          .controls {
+            @extend %controls;
+          }
+
+          .gtausername {
+            @extend %game_username;
+          }
+
+          .gtaleaguetext {
+            @extend %game_text;
+          }
+
+          .gtatime {
+            @extend %gametime;
+          }
         }
 
-        .controls {
-          position: absolute;
-          margin-top: 16px;
-          display: flex;
-          flex-direction: row;
-          font-size: 10px;
+      }
+    }
 
-          .label {
-            padding: 8px 16px;
-            background-color: $light-grey;
-            color: white;
-            align-self: center;
-            border: none;
+    .fifa_viewed {
+      margin: $game_space;
+
+      .fifapics {
+        @extend %game_grid;
+
+        .fifalive {
+          position: relative;
+
+          img {
+            @extend %game_images;
           }
 
-          .gta {
-            top: 5%;
-            margin-left: 24px;
+          .controls {
+            @extend %controls;
           }
 
-          .info {
-            display: flex;
-            flex-direction: row;
-            margin-left: 120px;
-
-            .dot {
-              @extend %icon_size;
-              background-color: $red;
-              border-radius: 50%;
-              margin: auto;
-            }
-
-            .live {
-             margin-left: 8px;
-            }
+          .fifausername {
+            @extend %game_username;
           }
+
+          .fifaleaguetext {
+            @extend %game_text;
+          }
+
+          .fifatime {
+            @extend %gametime;
+          }
+
         }
 
       }

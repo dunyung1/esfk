@@ -1,8 +1,6 @@
 %label {
-  padding: 8px;
   background-color: rgba(0, 0, 0, 0.87);
   color: white;
-  align-self: center;
   border: none;
 }
 
@@ -11,7 +9,104 @@
   height: 16px;
 }
 
-%game_size{
-    width: 300px;
-    height: 240px;
+%game_size {
+  width: 300px;
+  height: 240px;
+}
+
+%controls {
+  font-size: 10px;
+
+  .label {
+    @extend %label;
+    position: absolute;
+    padding: 8px 16px;
+  }
+
+  .game{
+    top: 5%;
+    margin-left: 8px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: row;
+
+    .dot {
+      @extend %icon_size;
+      background-color: #FF0000;
+      border-radius: 50%;
+      position: absolute;
+      right: 23%;
+      top: 7%;
+    }
+
+    .live {
+      top: 5%;
+      right: 3%;
+    }
+  }
+}
+
+%username{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.54);
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+
+  p {
+    font-size: 10px;
+    color: white;
+    margin: auto 0 auto 5px;
+  }
+}
+
+%leaguetext{
+  background-color:rgba(0, 0, 0, 0.54);
+  padding: 5px;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.54);
+}
+
+%gametime{
+  position: absolute;
+  bottom: 10%;
+  right: 3%;
+  background-color: rgba(0, 0, 0, 0.87);
+  color: white;
+  border: none;
+  font-size: 10px;
+  padding: 4px 8px;
+}
+
+%game_grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 24px;
+  margin-right: 24px;
+}
+
+%game_images{
+  @extend %game_size;
+  object-fit: cover;
+  object-position: 60% 0;
+}
+
+%game_username{
+  @extend %username;
+  margin: 0 0 0 8px;
+  bottom: 16.4%;
+}
+
+%game_text{
+  @extend %leaguetext;
+  margin-left: 8px;
+  bottom: 3.8%;
+  font-size: 10px;
 }
