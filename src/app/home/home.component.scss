@@ -1,30 +1,50 @@
 @import 'placeholder5';
 
 .main {
-  margin-top: 20px;
+  margin-top: 24px;
 
-  .cover, .main_gamer {
-    @extend %main_images;
-    object-fit: cover;
+  .game_collection {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 0;
+    height: 85vh;
+
+    img {
+      width: 137.5px;
+      height: 136px;
+      object-fit: cover;
+      object-position: 60% 80%;
+    }
   }
 
-  .centered {
-    position: absolute;
-    top: 146%;
-    left: 10%;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 48px;
-    color: white;
+  .gamer_image {
+    position: relative;
+
+    .main_gamer {
+      @extend %main_images;
+      object-fit: cover;
+    }
+
+    .centered {
+      position: absolute;
+      top: 36%;
+      left: 10%;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 48px;
+      color: white;
+
+      img {
+        position: absolute;
+        top: 25%;
+        left: 45%;
+        width: 80px;
+        height: 80px;
+      }
+    }
   }
 
-  .play {
-    position: absolute;
-    top: 25%;
-    left: 45%;
-    width: 80px;
-    height: 80px;
-  }
 }
 
 .news {
@@ -32,40 +52,49 @@
   flex-direction: row;
   flex-wrap: wrap;
   height: 100vh;
-  margin-top: 30px;
+  margin-top: 24px;
+  justify-content: space-between;
 
   .sysunit {
+    width: 33%;
     img {
       @extend %dimensions;
+      width: 100%;
       object-fit: cover;
-      object-position: 40% 0;
+      object-position: 40% 50%;
     }
-    .box{
+
+    .box {
       @extend %box;
     }
   }
 
   .comp {
+    width: 33%;
+
     img {
       @extend %dimensions;
+      width: 100%;
       object-fit: cover;
       object-position: 50% 0;
     }
-    .box{
+
+    .box {
       @extend %box;
     }
   }
 
   .xbox {
+    width: 33%;
     img {
       @extend %dimensions;
+      width: 100%;
       object-fit: contain;
       object-position: 100% 10;
     }
-    .box{
+
+    .box {
       @extend %box;
     }
   }
 }
-
-
