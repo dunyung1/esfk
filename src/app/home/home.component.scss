@@ -10,11 +10,34 @@
     grid-gap: 0;
     height: 85vh;
 
+    &:hover {
+      img {
+        transform: translateX(-25%);
+      }
+    }
+
+    img:hover ~ img {
+      transform: translateX(25%);
+    }
+
     img {
       width: 137.5px;
       height: 136px;
       object-fit: cover;
       object-position: 60% 80%;
+      transition: transform 300ms ease 100ms;
+      cursor: pointer;
+
+      &:after {
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+    
+      &:hover {
+        transform: scale(5);
+      }
+
     }
   }
 
