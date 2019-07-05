@@ -1,0 +1,50 @@
+$black: rgba(0, 0, 0, 0.87);
+$light-grey: rgba(0, 0, 0, 0.12);
+$kinda-grey: rgba(94, 109, 119, 1);
+$lighter-grey: rgba(0, 0, 0, 0.54);
+
+.clubs{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 24px;
+    width: 96%;
+    margin: 24px auto 0 auto;
+
+    .thegames{
+        img{
+            width: 395px;
+            height: 290px;
+            object-fit: cover;
+            object-position: 60% 80%;
+        }
+        .title{
+            background-color: rgba(224, 224, 224, 1);
+            padding: 8px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.54);
+            margin: 16px 0 16px 0;
+        }
+        .buttoncontainer{
+            .already, .entry, .number{
+                padding: 8px 15.4px;
+                border: none;
+            }
+            .already{
+                background-color: $kinda-grey;
+                color: white;
+            }
+            .entry{
+                margin: 0 14px 0 14px;
+                background-color: $black;
+                color: white;
+            }
+            .number{
+                background-color: $light-grey;
+                color: $lighter-grey;
+            }
+        }
+    }
+    
+
+}
