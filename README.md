@@ -11,7 +11,7 @@ To run this project, follow these instructions:
 - `npm install -g @angular/cli`
 
 2. Then clone the project or extract it from the rar file.
-3. Install the module @angular-devkit/build-angular
+3. Install the module @angular-devkit/build-angular `npm install --save-dev @angular-devkit/build-angular`
 4. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
