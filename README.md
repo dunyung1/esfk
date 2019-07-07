@@ -2,9 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
-## Development server
-1. Install the module @angular-devkit/build-angular
-2. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Setting Up
+
+To run this project, follow these instructions:
+
+1. First install angular
+
+- `npm install -g @angular/cli`
+
+2. Then clone the project or extract it from the rar file.
+3. Install the module @angular-devkit/build-angular
+4. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
