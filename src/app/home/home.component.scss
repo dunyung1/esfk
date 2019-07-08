@@ -9,66 +9,119 @@
     grid-template-rows: repeat(4, 1fr);
     grid-gap: 0;
     height: 85vh;
+    overflow: hidden;
+    // &:hover {
+    //   img {
+    //     transform: translateX(-25%);
+    //   }
+    // }
 
-    &:hover {
-      img {
-        transform: translateX(-25%);
+    // img:hover ~ img {
+    //   transform: translateX(25%);
+    // }
+
+  
+      .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve,
+      .thirteen, .fourteen, .fifteen, .sixteen, .seventeen, .eighteen, .nineteen, .twenty,
+      .twentyone, .twentytwo, .twentythree, .twentyfour, .twentyfive, .twentysix, .twentyseven,
+      .twentyeight, .twentynine, .thirty, .thirtyone, .thirtytwo, .thirtythree, .thirtyfour,
+      .thirtyfive, .thirtysix {
+        width: 137.5px;
+        height: 136px;
+        object-fit: cover;
+        object-position: 60% 80%;
+        transition: 500ms ease;
+        cursor: pointer;
       }
-    }
 
-    img:hover ~ img {
-      transform: translateX(25%);
-    }
+      .zoomed {
+        transform: translate(40%,50%) scale(2);
+        width: 150%;
+        height: 150%;
+      }
+
+      .zoomedright {
+        transform: translate(-60%,50%) scale(2);
+        width: 150%;
+        height: 150%;
+      }
+
+      .zoomcenter{
+        transform: translate(40%,50%) scale(2);
+        object-fit: cover;
+        object-position: 30% 80%;
+        width: 150%;
+        height: 150%;
+      }
+
+      .zoomup{
+        transform: translate(40%,-50%) scale(2);
+        width: 150%;
+        height: 150%;
+      }
+
+      .zoomupright{
+        transform: translate(-40%,-50%) scale(2);
+        width: 150%;
+        height: 150%;
+      }
+  
+    // .theimage2 {
+    //   .two {
+    //     width: 137.5px;
+    //     height: 136px;
+    //     object-fit: cover;
+    //     object-position: 60% 80%;
+    //     transition: 500ms ease;
+    //     cursor: pointer;
+    //   }
+
+    //   .zoomed {
+    //     transform: scale(2);
+    //   }
+    // }
+
+  }
+}
+
+// &:after {
+//   content: "";
+//   display: block;
+//   padding-top: 100%;
+// }
+
+// &:hover {
+//   transform: scale(5);
+// }
+
+
+.gamer_image {
+  position: relative;
+
+  .main_gamer {
+    @extend %main_images;
+    object-fit: cover;
+  }
+
+  .centered {
+    position: absolute;
+    top: 36%;
+    left: 10%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    color: white;
 
     img {
-      width: 137.5px;
-      height: 136px;
-      object-fit: cover;
-      object-position: 60% 80%;
-      transition: transform 300ms ease 100ms;
-      cursor: pointer;
-
-      &:after {
-        content: "";
-        display: block;
-        padding-top: 100%;
-      }
-    
-      &:hover {
-        transform: scale(5);
-      }
-
-    }
-  }
-
-  .gamer_image {
-    position: relative;
-
-    .main_gamer {
-      @extend %main_images;
-      object-fit: cover;
-    }
-
-    .centered {
       position: absolute;
-      top: 36%;
-      left: 10%;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 500;
-      font-size: 48px;
-      color: white;
-
-      img {
-        position: absolute;
-        top: 25%;
-        left: 45%;
-        width: 80px;
-        height: 80px;
-      }
+      top: 25%;
+      left: 45%;
+      width: 80px;
+      height: 80px;
     }
   }
-
 }
+
 
 .news {
   display: flex;
@@ -80,6 +133,7 @@
 
   .sysunit {
     width: 33%;
+
     img {
       @extend %dimensions;
       width: 100%;
@@ -109,6 +163,7 @@
 
   .xbox {
     width: 33%;
+
     img {
       @extend %dimensions;
       width: 100%;
