@@ -20,9 +20,12 @@ export class HomeComponent implements OnInit {
     //     $(this).toggleClass('expand').siblings().removeClass('expand');
     //   });
 
-    $('.game').on('click', function () {
+    $('.game').on('click', function () 
+    {
       $(this).toggleClass('expand').siblings().removeClass('expand');
-    });
+    }
+
+    );
 
   }
 }
