@@ -1,36 +1,56 @@
 @import 'placeholder5';
 
-.main {
-  margin-top: 24px;
+.game_collection {
+  margin-top: 20px;
+  height: 72vh !important;
+}
 
-  .game_collection {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
-    grid-template-rows: repeat(4, minmax(125px, 1fr));
-    overflow: hidden;
-   
-    .game {
-      img {
-        // position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 50% 0;
-        cursor: pointer;
-      }
-    }
+.game_collection::after {
+  content: '';
+  display: block;
+  clear: both;
+}
 
-    .expand {
-      transform: translate(40%, 50%) scale(3, 3);
-      // grid-area: span 3 / span 3; 
-      transition: 700ms ease;  
-    }
+.game {
+  float: left;
+  position: relative !important;
+  transition-property: inherit !important;
+  transition-delay: inherit !important;
+}
+
+.game_sizer,
+.game {
+  width: 11.11%;
+}
+
+.game {
+  img {
+    display: block;
+    width: 100%;
+    height: 124px;
+    object-fit: cover;
+    object-position: 30% 80%;
   }
 }
 
+.game:hover img {
+  cursor: pointer;
+}
+
+.game.expanded,
+.game.expanded img {
+  width: 360px;
+  height: 248px;
+  transition: width 0.5s, height 0.5s; 
+}
+
+.game.expanded {
+  z-index: 2;
+}
 
 .gamer_image {
   position: relative;
+  margin-top: 20px;
 
   .main_gamer {
     @extend %main_images;

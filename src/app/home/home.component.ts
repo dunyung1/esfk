@@ -12,20 +12,23 @@ declare var $: any;
 })
 export class HomeComponent implements OnInit {
 
+
   constructor() {}
 
   ngOnInit() {
 
-    // $('.game_collection').on('click', '.game', function () {
-    //     $(this).toggleClass('expand').siblings().removeClass('expand');
-    //   });
 
-    $('.game').on('click', function () 
-    {
-      $(this).toggleClass('expand').siblings().removeClass('expand');
-    }
+    var $collection = $('.game_collection').masonry({
+      columnWidth: '.game-sizer',
+      percentPosition: true,
+      itemSelector: '.game',
+      stagger: 100
+    });
 
-    );
+    $collection.on('click', 'img', function ( event ) {
+      $(event.currentTarget).parent('.game').toggleClass('expanded').siblings().removeClass('expanded');
+      $collection.masonry();
+    });
 
   }
 }
