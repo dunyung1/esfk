@@ -17,17 +17,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
-
-    var $collection = $('.game_collection').masonry({
-      columnWidth: '.game-sizer',
-      percentPosition: true,
-      itemSelector: '.game',
-      stagger: 100
-    });
-
-    $collection.on('click', 'img', function ( event ) {
-      $(event.currentTarget).parent('.game').toggleClass('expanded').siblings().removeClass('expanded');
-      $collection.masonry();
+    $('.game > img').click(function() {
+      $(this).toggleClass('expand',800).siblings().removeClass('expand');
     });
 
   }

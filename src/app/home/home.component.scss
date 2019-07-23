@@ -2,50 +2,34 @@
 
 .game_collection {
   margin-top: 20px;
-  height: 72vh !important;
-}
-
-.game_collection::after {
-  content: '';
-  display: block;
-  clear: both;
+  height: 72vh;
+  overflow: hidden;
 }
 
 .game {
-  float: left;
-  position: relative !important;
-  transition-property: inherit !important;
-  transition-delay: inherit !important;
-}
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  transition: all 1s;
+ 
 
-.game_sizer,
-.game {
-  width: 11.11%;
-}
-
-.game {
   img {
-    display: block;
     width: 100%;
-    height: 124px;
+    height: 100%;
     object-fit: cover;
     object-position: 30% 80%;
+
+    &:hover {
+      cursor: pointer;
+    }
+
   }
-}
-
-.game:hover img {
-  cursor: pointer;
-}
-
-.game.expanded,
-.game.expanded img {
-  width: 360px;
-  height: 248px;
-  transition: width 0.5s, height 0.5s; 
-}
-
-.game.expanded {
-  z-index: 2;
+  .expand {
+    grid-area: span 3 / span 3;
+    margin: 0;
+  }
 }
 
 .gamer_image {
