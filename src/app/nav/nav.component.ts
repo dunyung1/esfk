@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  appTitle: string= 'ESPK'; //interpolation. specifying the app title property
+  appTitle: string= 'ESFK'; //interpolation. specifying the app title property
 
   constructor() { }
 
